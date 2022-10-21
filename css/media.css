@@ -1,0 +1,449 @@
+@media screen and (max-width: 84em) {
+    .hero {
+        max-width: 120rem;
+
+    }
+
+    .heading {
+        margin-top: 5rem;
+        font-size: 5.2rem;
+    }
+
+    .hero-description {
+        font-size: 2.8rem
+    }
+
+}
+
+@media screen and (max-width: 75em) {
+    html {
+        font-size: 52.5%;
+    }
+
+    .collections .grid {       
+        row-gap: 5.2rem;
+    }
+
+    .creators {
+        padding: 7rem 0rem 9.6rem 0rem;
+    }
+
+    .container {
+        max-width: 125rem;
+    }
+}
+
+@media screen and (max-width: 64.5em) {
+    html {
+        font-size: 50%;
+    }
+
+    .hero {
+        max-width: 110rem;
+    }
+
+    .create-1 {
+        width: 32rem;
+    }
+
+   
+}
+
+@media screen and (max-width: 59.5em) {
+    .grid--3-cols {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .creator-box {
+        width: 41rem;
+        height: 15rem;
+    }
+
+    .create-1 {
+        width: 40rem;
+    }
+
+    .grid--4-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .drops-card {
+        width: 30rem;
+        height: 45rem;
+    }
+
+    .drop-img {
+        width: 25rem;
+        height: 28rem;
+    }
+
+    .p-hd {
+        font-size: 2.8rem;
+    }
+
+    .p-sb {
+        font-size: 2.2rem;
+    }
+
+    .creator-box:last-child {
+        display: none;
+    }
+
+    .d-none {
+        display: block;
+    }
+
+    .cta-box {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 54em) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 0 8.2rem;
+        gap: 8.6rem;
+        text-align: center !important;
+    }
+
+    .card {
+        margin-top: 5rem;
+        transform: rotateZ(0deg);
+        width: 47rem;
+        height: 55rem;
+    }
+
+    .d-btn2 {
+        display: block !important;
+    }
+
+    .d-btn {
+        display: none !important;
+    }
+
+
+    .nav-open .navbar {
+        opacity: 1;
+        z-index: 10000 !important;
+        pointer-events: auto;
+        visibility: visible;
+        /* animation: myAnim .3s ease 0s 1 normal forwards;
+        transition: all .4s ease !important; */
+
+        animation: navClose .3s ease 0s 1 normal forwards;
+    }
+
+    .navbar {
+        background-color: #011333;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: navOpen .4s ease 0s 1 normal backwards;
+        /* Hide nav
+        using display: none; does not allow animation */
+        /* 
+        to hide visibility: ; */
+        opacity: 0;
+        /*step 1*/
+        pointer-events: none;
+        /*step 2 : unaccessible to mouse and keyboard*/
+        visibility: hidden;
+        /*step 3* to hide from screen readers*/
+
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 6.2rem;
+    }
+
+    .nav-link:link,
+    .nav-link:visited {
+        font-size: 3rem;
+    }
+
+    .nav-open .icon-mobile[name="close-outline"] {
+        display: block;
+        font-size: 5rem;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+    }
+
+    .icon-mobile[name="menu-outline"] {
+        display: block;
+        font-size: 5rem;
+    }
+
+    .nav-open .icon-mobile[name="menu-outline"] {
+        display: none !important;
+
+    }
+
+    @keyframes navOpen {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(250px);
+        }
+    }
+
+    @keyframes navClose {
+        0% {
+            opacity: 0;
+            transform: translateX(250px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .cta-box {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 51.5em) {
+    .grid--4-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .drops-card {
+        width: 33.5rem;
+        height: 48rem;
+    }
+
+    .drop-img {
+        width: 27rem;
+        height: 30rem;
+    }
+
+    .p-hd {
+        font-size: 3rem;
+    }
+
+    .p-sb {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 47em) {
+    .grid--3-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tabs-bar {
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width: 40em) {
+
+    .grid--3-cols,
+    .grid--4-cols {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .logo-col {
+        grid-column: -6 / -2;
+    }
+
+    .nav-col {
+        grid-row: 1;
+        grid-column: span 2;
+        margin-bottom: 3.2rem;
+        justify-self: center;
+    }
+
+    .text-secondary {
+        font-size: 4.4rem;
+        line-height: 1;
+        margin-bottom: 5.2rem;
+
+    }
+
+    .navbar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 36em) {
+
+    .form {
+        flex-wrap: wrap;
+    }
+
+    .form-email {
+        padding: 1.8rem 8.6rem;
+        font-size: 1.4rem;
+    }
+
+    .cta-heading {
+        font-size: 4.2rem;
+        font-weight: 600;
+    }
+
+    .cta-box {
+        padding: 1.2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 26.5em) {
+    .hero {
+        padding: 0 1.2rem;
+    }
+
+    .card {
+        width: 41rem;
+        height: 50rem;
+    }
+
+    .creators .text-center {
+        padding: 0 1rem;
+    }
+
+    .logo-col {
+        grid-column: -6 / -1;
+    }
+
+    .form-email {
+        padding: 1.8rem 6.4rem;
+        font-size: 1.2rem;
+    }
+
+    .cta-heading {
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+
+    .create {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 26.5em) {
+    .heading {
+        margin-top: 5rem;
+        font-size: 4.8rem;
+    }
+
+    .hero-description {
+        font-size: 2.2rem
+    }
+
+    .create-1 {
+        width: 35rem;
+    }
+
+    .creator-box {
+        width: 35rem;
+        height: 13rem;
+    }
+
+    .drops-card {
+        width: 27rem;
+        height: 42rem;
+    }
+
+    .drop-img {
+        width: 23rem;
+        height: 25rem;
+    }
+
+    .p-hd {
+        font-size: 2.4rem;
+    }
+
+    .p-sb {
+        font-size: 2rem;
+    }
+
+    .footer-grid {
+        column-gap: 2rem;
+    }
+     .logo {
+         height: 3.6rem;
+     }
+
+  
+
+
+}
+
+@media screen and (max-width: 22.5em) {
+    .footer-grid {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .logo-col {
+        grid-column: 1 / -2;
+        grid-row: 4 /-2;
+    }
+    .nav-col{
+        justify-self: flex-start;
+    }
+    .nav-col:first-child {
+        grid-row: 1/2;
+        grid-column: 1/ -2;
+        /* margin-bottom: 3.2rem;
+        justify-self: center; */
+    }
+    .nav-col:nth-child(2){
+        grid-row: 2/3;
+        grid-column: 1/ -2;
+    }
+    .nav-col:last-child {
+         grid-row: 3/4;
+         grid-column: 1/ -2;
+    }
+    .heading {
+        margin-top: 5rem;
+        font-size: 4.2rem;
+    }
+
+    .hero-description {
+        font-size: 2.2rem
+    }
+    .hero-img .splide__slide,
+    .hero-img .splide {
+        width: 40rem;
+        height: 45rem;
+    }
+    .logo{
+        height: 3.4rem;
+    }
+}
