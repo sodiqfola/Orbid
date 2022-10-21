@@ -1,4 +1,4 @@
-#  Oribid
+#  Orbid
 
 ###  A fully Responsive NFT website design
 
