@@ -1,0 +1,460 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 
+Small: 
+Medium: 
+Paragraph default: 
+
+- Letter spacing
+-0.5px
+
+
+--- 02 COLORS
+
+- Primary: 
+- Tints:
+
+
+- Shades: 
+
+
+- Accents:
+- Greys
+
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 2rem
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Font and typography ==========*/
+    --body-font: 'DM Sans', sans-serif;
+    --first-color: rgb(81, 170, 225);
+    --second-color: rgb(184, 128, 219);
+}
+
+/*=============== BASE ===============*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 10px; */
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--body-font);
+    color: #fff;
+    background-color: #040a0f;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* main{
+    /* font-family: 'Rubik', sans-serif; 
+} */
+.btn,
+.btn:link,
+.btn:visited {
+    background-color: #1e50ff;
+    color: #fff;
+    display: inline-block;
+
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.2rem 2.4rem;
+    border-radius: 100px;
+
+    /* Only necessary for .btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    background: #48a5e8;
+}
+
+.card-text {
+    margin: 0rem 3rem;
+}
+
+.p-head {
+    font-weight: 500;
+    font-size: 3rem;
+
+}
+
+.p-sub {
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin-top: 1rem;
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+    background: linear-gradient(90deg, #48a5e8, #054979);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-secondary {
+    font-size: 5.2rem;
+    line-height: 1.2;
+    margin-bottom: 6.4rem;
+    font-weight: 700;
+    font-family: 'Syne', sans-serif;
+}
+
+.grid {
+    display: grid;
+
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    row-gap: 3.4rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    /* grid-template-rows: repeat(3, 1fr); */
+}
+
+.small-sp,
+.big-sp1,
+.big-sp2 {
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+.small-sp {
+    width: 13rem;
+    height: 13rem;
+    background-color: var(--first-color);
+    filter: blur(120px);
+}
+
+.section-hero .small-sp {
+    top: 70px;
+}
+
+.big-sp1,
+.big-sp2 {
+    width: 17rem;
+    height: 17rem;
+    filter: blur(180px);
+}
+
+.big-sp1 {
+    background-color: var(--first-color);
+}
+
+.big-sp2 {
+    background-color: var(--second-color);
+}
+
+.features .big-sp2 {
+    right: -15px;
+    bottom: -30px;
+}
+
+.creators .big-sp2 {
+    left: -15px;
+    top: 30px;
+}
+
+.create .big-sp1 {
+    right: 0;
+    top: 70px;
+}
+
+.cta .small-sp {
+    bottom: -100px !important;
+    left: -10px;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+
+.p-hd {
+    font-weight: 500;
+    font-size: 2.6rem;
+
+}
+
+.p-sb {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.bg-1 {
+    background-image: url(../img/nft/bg4.png);
+}
+
+.bg-2 {
+    background-image: url(../img/nft/azuki3.png);
+}
+
+.bg-3 {
+    background-image: url(../img/nft/wizard1.png);
+}
+
+.bg-4 {
+    background-image: url(../img/nft/clone-1.png);
+}
+.bg-5 {
+    background-image: url(../img/nft/azukiHero.png);
+}
+.bg-6 {
+    background-image: url(../img/nft/ling1.png);
+}
+
+/**************************/
+/* Collection SECTION */
+/**************************/
+
+
+
+.drop-1 {
+    background-image: url(../img/nft/wizard2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-2 {
+    background-image: url(../img/nft/azuki1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-3 {
+    background-image: url(../img/nft/clone-1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-4 {
+    background-image: url(../img/nft/kitaro2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-5 {
+    background-image: url(../img/nft/azuki4.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-6 {
+    background-image: url(../img/nft/kitaro1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-7 {
+    background-image: url(../img/nft/azuki2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.drop-8 {
+    background-image: url(../img/nft/clone-3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-9 {
+    background-image: url(../img/nft/wizard1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-10 {
+    background-image: url(../img/nft/kitaro3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-11 {
+    background-image: url(../img/nft/azuki2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.drop-12 {
+    background-image: url(../img/nft/clone-2.png);
+    background-position: center;
+    background-size: cover;
+}
+.drop-13 {
+    background-image: url(../img/nft/azukiHero.png);
+    background-position: center;
+    background-size: cover;
+}
+.drop-14 {
+    background-image: url(../img/nft/ling2.png);
+    background-position: center;
+    background-size: cover;
+}
+.drop-15 {
+    background-image: url(../img/nft/azuki6.png);
+    background-position: center;
+    background-size: cover;
+}
+.drop-16 {
+    background-image: url(../img/nft/clone1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.p-span {
+    color: #a6a6a6;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.drop-text .p-sb {
+    color: #0037ff;
+}
+
+
+.cr-1 {
+    background-image: url(../img/avatar/avatar3.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-2 {
+    background-image: url(../img/avatar/avatar5.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-3 {
+    background-image: url(../img/avatar/avatar2.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-4 {
+    background-image: url(../img/avatar/avatar8.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-5 {
+    background-image: url(../img/avatar/avatar9.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-6 {
+    background-image: url(../img/avatar/avatar6.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-7 {
+    background-image: url(../img/avatar/avatar7.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-8 {
+    background-image: url(../img/avatar/avatar4.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.cr-9 {
+    background-image: url(../img/avatar/avatar1.webp);
+    background-position: center;
+    background-size: cover;
+}
